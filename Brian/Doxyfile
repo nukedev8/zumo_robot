@@ -1,0 +1,28 @@
+PROJECT_NAME           = "Zumo Robot"
+PROJECT_BRIEF          = "Arduino C++ project for buttons, motors, and IR proximity monitoring"
+OUTPUT_DIRECTORY       = docs
+
+INPUT                  = readme.md zumo
+RECURSIVE              = YES
+FILE_PATTERNS          = *.ino *.h *.cpp *.md
+EXTENSION_MAPPING      = ino=C++
+USE_MDFILE_AS_MAINPAGE = readme.md
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+MARKDOWN_SUPPORT       = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+
+GENERATE_HTML          = YES
+GENERATE_TREEVIEW      = YES
+GENERATE_LATEX         = NO
+
+QUIET                  = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+
+HAVE_DOT               = NO
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO

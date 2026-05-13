@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #204a61;
+  --primary-dark-color: #143142;
+  --primary-light-color: #e7f1f6;
+  --page-background-color: #fbf8f1;
+}
+
+body {
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+  line-height: 1.55;
+}
+
+#titlearea {
+  border-bottom: 0;
+  background: linear-gradient(135deg, #143142, #2d6f73);
+  color: white;
+}
+
+#projectname {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+#projectbrief {
+  color: #d7eee9;
+}
+
+div.contents {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+table.markdownTable {
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(20, 49, 66, 0.12);
+  overflow: hidden;
+}
+
+div.fragment {
+  border-radius: 10px;
+}
