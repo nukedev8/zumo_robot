@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>18</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>522</y>
+      <w>468</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>Imu
+--
+-Zumo32U4IMU inner_umi
+-gyro_offset : Vec&lt;float&gt;
+-acc_offset : Vec&lt;float&gt;
+-heading : Vec&lt;float&gt;
+-vel : Vec&lt;float&gt;
+-pos : Vec&lt;float&gt;
+-last_update : int32_t
+--
++init() : int
++calibrate()
++update()
++getHeading() : Vec&lt;float&gt;
++getVelocity() : Vec&lt;float&gt;
++getPosition() : Vec&lt;float&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1026</x>
+      <y>630</y>
+      <w>450</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Motors
+--
+-encoders : Zumo32U4encoders
+-motors : Zumo32U4Motors
+--
++move(int)
++move(int, int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
