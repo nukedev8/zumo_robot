@@ -1,0 +1,88 @@
+\doxysection{XBee Class Reference}
+\hypertarget{class_x_bee}{}\label{class_x_bee}\index{XBee@{XBee}}
+
+
+{\ttfamily \+\#include $<$xbee.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_x_bee_a83aa8dbe5b86ca1c2bc7779f7fd2a1e5}{XBee}} (unsigned long baud=9600)
+\item 
+void \doxymbox{\hyperlink{class_x_bee_a12e2532633a838cbb7b50ad37a8fce1b}{init}} ()
+\item 
+void \doxymbox{\hyperlink{class_x_bee_a5ddbdab382e8a92f8d59a5074b92f932}{send\+Char}} (char c)
+\item 
+void \doxymbox{\hyperlink{class_x_bee_a97117c65c2764e70d74f21c3524cb504}{send\+String}} (const char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \doxymbox{\hyperlink{class_x_bee_abf591d493d644d2ba090a7c9eb627df4}{send\+Int}} (int n)
+\item 
+bool \doxymbox{\hyperlink{class_x_bee_aabee3a4654a4baad414b4da8f0bd4136}{available}} () const
+\item 
+char \doxymbox{\hyperlink{class_x_bee_aa8dc735297fd914fb1713e8bbae18f4e}{receive}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasse voor de \doxylink{class_x_bee}{XBee} module. 8-\/05-\/2026
+
+De \doxylink{class_x_bee}{XBee} module is verbonden met UART1 van de ATmega32\+U4. Communicatie verloopt via Serial1. 
+
+\label{class_x_bee_doc-constructors}
+\Hypertarget{class_x_bee_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_x_bee_a83aa8dbe5b86ca1c2bc7779f7fd2a1e5}\index{XBee@{XBee}!XBee@{XBee}}
+\index{XBee@{XBee}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{XBee()}{XBee()}}
+{\footnotesize\ttfamily \label{class_x_bee_a83aa8dbe5b86ca1c2bc7779f7fd2a1e5} 
+XBee::\+\+XBee (\begin{DoxyParamCaption}\item[{unsigned long}]{baud}{ = {\ttfamily 9600}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Stelt de baudrate in op 9600, die moet overal wel gelijk zijn.
+
+Implementatie van de \doxylink{class_x_bee}{XBee} module. 8-\/05-\/2026 
+
+\label{class_x_bee_doc-func-members}
+\Hypertarget{class_x_bee_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_x_bee_aabee3a4654a4baad414b4da8f0bd4136}\index{XBee@{XBee}!available@{available}}
+\index{available@{available}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily \label{class_x_bee_aabee3a4654a4baad414b4da8f0bd4136} 
+bool XBee::\+available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Controleert of er data beschikbaar is in de ontvangstbuffer. \Hypertarget{class_x_bee_a12e2532633a838cbb7b50ad37a8fce1b}\index{XBee@{XBee}!init@{init}}
+\index{init@{init}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_x_bee_a12e2532633a838cbb7b50ad37a8fce1b} 
+void XBee::\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+initialiseert Serial1 met de baudrate die is ingesteld. wacht 200 milliseconden zodat de Xbee klaar is na het opstarten. \Hypertarget{class_x_bee_aa8dc735297fd914fb1713e8bbae18f4e}\index{XBee@{XBee}!receive@{receive}}
+\index{receive@{receive}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily \label{class_x_bee_aa8dc735297fd914fb1713e8bbae18f4e} 
+char XBee::\+receive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Geeft ontvangen karakter terug. \Hypertarget{class_x_bee_a5ddbdab382e8a92f8d59a5074b92f932}\index{XBee@{XBee}!sendChar@{sendChar}}
+\index{sendChar@{sendChar}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{sendChar()}{sendChar()}}
+{\footnotesize\ttfamily \label{class_x_bee_a5ddbdab382e8a92f8d59a5074b92f932} 
+void XBee::\+send\+Char (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+Verstuurd 1 karakter via het toetsenbord. \Hypertarget{class_x_bee_abf591d493d644d2ba090a7c9eb627df4}\index{XBee@{XBee}!sendInt@{sendInt}}
+\index{sendInt@{sendInt}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{sendInt()}{sendInt()}}
+{\footnotesize\ttfamily \label{class_x_bee_abf591d493d644d2ba090a7c9eb627df4} 
+void XBee::\+send\+Int (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+Verstuurd een getal. Zo kan je bijvoorbeeld heel snel aangeven wat ie moet doen bij "{}programma 1"{}. \Hypertarget{class_x_bee_a97117c65c2764e70d74f21c3524cb504}\index{XBee@{XBee}!sendString@{sendString}}
+\index{sendString@{sendString}!XBee@{XBee}}
+\doxysubsubsection{\texorpdfstring{sendString()}{sendString()}}
+{\footnotesize\ttfamily \label{class_x_bee_a97117c65c2764e70d74f21c3524cb504} 
+void XBee::\+send\+String (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Vragen of deze wel nodig is 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+xbee.\+h\item 
+xbee.\+cpp\end{DoxyCompactItemize}
