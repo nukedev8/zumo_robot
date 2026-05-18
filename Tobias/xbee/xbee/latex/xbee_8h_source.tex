@@ -1,0 +1,28 @@
+\doxysection{xbee.\+h}
+\hypertarget{xbee_8h_source}{}\label{xbee_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ XBEE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ XBEE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_x_bee_a83aa8dbe5b86ca1c2bc7779f7fd2a1e5}{XBee}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_x_bee_a83aa8dbe5b86ca1c2bc7779f7fd2a1e5}{XBee}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ baud\ =\ 9600);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_x_bee_a83aa8dbe5b86ca1c2bc7779f7fd2a1e5}{\string~XBee}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_x_bee_a12e2532633a838cbb7b50ad37a8fce1b}{init}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_x_bee_a5ddbdab382e8a92f8d59a5074b92f932}{sendChar}}(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_x_bee_a97117c65c2764e70d74f21c3524cb504}{sendString}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ str);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_x_bee_abf591d493d644d2ba090a7c9eb627df4}{sendInt}}(\textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_x_bee_aabee3a4654a4baad414b4da8f0bd4136}{available}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{class_x_bee_aa8dc735297fd914fb1713e8bbae18f4e}{receive}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \_baud;}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
