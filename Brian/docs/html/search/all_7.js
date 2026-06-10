@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['objectfront_0',['objectFront',['../struct_input_snapshot.html#a3de0ef9e9f53ac73865bca5c644bfecf',1,'InputSnapshot']]],
-  ['objectinfront_1',['objectInFront',['../class_i_r_pulses.html#a2684db851aac16f4989b6a2acd0870a7',1,'IRPulses']]]
+  ['none_0',['None',['../proximitysensor_8h.html#a195daabd4a6ae7203f5d9cc1054b923da6adf97f83acf6453d4a6a4b1070f3754',1,'proximitysensor.h']]]
 ];

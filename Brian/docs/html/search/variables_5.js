@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['objectfront_0',['objectFront',['../struct_input_snapshot.html#a3de0ef9e9f53ac73865bca5c644bfecf',1,'InputSnapshot']]]
+  ['mode_0',['mode',['../class_button.html#a8d4341e791260a31efd026ccf7818cdd',1,'Button']]],
+  ['motors_1',['motors',['../zumo_8ino.html#a452935ce40125d44a8db6f3470ef8742',1,'motors:&#160;zumo.ino'],['../promxity_8ino.html#a452935ce40125d44a8db6f3470ef8742',1,'motors:&#160;promxity.ino']]]
 ];

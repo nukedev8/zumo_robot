@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['paused_0',['Paused',['../zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a',1,'zumo.ino']]],
-  ['previouspressed_1',['previousPressed',['../class_button.html#a537b8d565e0df38cdf5043331e727a50',1,'Button']]],
-  ['printbuttoninputs_2',['printButtonInputs',['../zumo_8ino.html#a70f4c3a79caf5744f83955b338ff9a35',1,'zumo.ino']]],
-  ['printinputmonitor_3',['printInputMonitor',['../zumo_8ino.html#a6896dd55a1323833026fb1e0e60d4479',1,'zumo.ino']]],
-  ['printirinputs_4',['printIrInputs',['../zumo_8ino.html#aed1826c1494ce7cf05af0f96753ba063',1,'zumo.ino']]],
-  ['printrobotmode_5',['printRobotMode',['../zumo_8ino.html#a3011f31c252e65727a47ed2d6441d6c2',1,'zumo.ino']]]
+  ['objectdetected_0',['objectDetected',['../class_proximity_sensor.html#a22b41e0f54966b36d8645eb1f9d8f001',1,'ProximitySensor']]],
+  ['objectdirection_1',['ObjectDirection',['../proximitysensor_8h.html#a195daabd4a6ae7203f5d9cc1054b923d',1,'proximitysensor.h']]],
+  ['objectdirection_2',['objectDirection',['../class_proximity_sensor.html#a817b9b376d74a2ee431a4f387fbcf0af',1,'ProximitySensor']]],
+  ['objectfront_3',['objectFront',['../struct_input_snapshot.html#a3de0ef9e9f53ac73865bca5c644bfecf',1,'InputSnapshot::objectFront'],['../class_proximity_sensor.html#a52ba8c72f652c5869d9557941a947657',1,'ProximitySensor::objectFront']]],
+  ['objectinfront_4',['objectInFront',['../class_i_r_pulses.html#a2684db851aac16f4989b6a2acd0870a7',1,'IRPulses::objectInFront()'],['../class_proximity_sensor.html#aa1e2e49a86ae4a8e4b94f81c5525bcc6',1,'ProximitySensor::objectInFront()']]]
 ];

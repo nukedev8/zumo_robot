@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('zumo_8ino.html
 <div class="contents">
 <div class="textblock"><code>#include &lt;Wire.h&gt;</code><br />
 <code>#include &lt;Zumo32U4.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="buttons_8h_source.html">buttons.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="irpulses_8h_source.html">irpulses.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="zumo_2buttons_8h_source.html">buttons.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="zumo_2irpulses_8h_source.html">irpulses.h</a>&quot;</code><br />
 </div>
 <p><a href="zumo_8ino_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -132,9 +132,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a09e63731d65d1c8a400391e3aa2c4ac3" id="r_a09e63731d65d1c8a400391e3aa2c4ac3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3">RobotMode</a> { <a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a>
+<tr class="memitem:a09e63731d65d1c8a400391e3aa2c4ac3" id="r_a09e63731d65d1c8a400391e3aa2c4ac3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3">RobotMode</a> { <br />
+&#160;&#160;<a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a>
 , <a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a">Paused</a>
 , <a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8">Racing</a>
+, <a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a>
+, <br />
+&#160;&#160;<a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a">Paused</a>
+, <a class="el" href="#a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8">Racing</a>
+<br />
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
@@ -192,6 +198,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2" name="a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2"></a>Stopped&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a" name="a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a"></a>Paused&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8" name="a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8"></a>Racing&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2" name="a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2"></a>Stopped&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a" name="a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a"></a>Paused&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8" name="a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8"></a>Racing&#160;</td><td class="fielddoc"></td></tr>
 </table>
@@ -319,7 +328,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Prints button and IR input values to the Serial Monitor. Return type: void. </p>
+<p>Prints button and IR input values to the Serial Monitor. Return type: void.</p>
+<p>Prints button and proximity input values to the Serial Monitor. Return type: void. </p>
 
 <p class="definition">Definition at line <a class="el" href="zumo_8ino_source.html#l00191">191</a> of file <a class="el" href="zumo_8ino_source.html">zumo.ino</a>.</p>
 
@@ -384,7 +394,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reads all button and IR input values into one struct. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_input_snapshot.html">InputSnapshot</a> - current values from the buttons and front IR sensor. </dd></dl>
+<p>Reads all button and IR input values into one struct. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_input_snapshot.html">InputSnapshot</a> - current values from the buttons and front IR sensor.</dd></dl>
+<p>Reads all button and proximity input values into one struct. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_input_snapshot.html">InputSnapshot</a> - current values from the buttons and proximity sensor. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="zumo_8ino_source.html#l00171">171</a> of file <a class="el" href="zumo_8ino_source.html">zumo.ino</a>.</p>
 

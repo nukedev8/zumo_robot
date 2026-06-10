@@ -1,0 +1,11 @@
+{
+  "arduino.useArduinoCli": true,
+  "arduino.path": "/opt/homebrew/bin",
+  "arduino.commandPath": "arduino-cli",
+  "files.associations": {
+    "*.ino": "cpp"
+  },
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.errorSquiggles": "disabled",
+  "clangd.enable": false
+}

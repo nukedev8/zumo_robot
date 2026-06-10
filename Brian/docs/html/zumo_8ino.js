@@ -4,6 +4,9 @@ var zumo_8ino =
     [ "RobotMode", "zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3", [
       [ "Stopped", "zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2", null ],
       [ "Paused", "zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a", null ],
+      [ "Racing", "zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8", null ],
+      [ "Stopped", "zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3ac23e2b09ebe6bf4cb5e2a9abe85c0be2", null ],
+      [ "Paused", "zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3ae99180abf47a8b3a856e0bcb2656990a", null ],
       [ "Racing", "zumo_8ino.html#a09e63731d65d1c8a400391e3aa2c4ac3acccb415e6e81d3303a19fdf10e6c68b8", null ]
     ] ],
     [ "beginButtons", "zumo_8ino.html#a00f0c550977e3e494ab073669bade90c", null ],
