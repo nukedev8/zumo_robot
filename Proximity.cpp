@@ -1,11 +1,11 @@
 #include "Proximity.h"
 
 /**
- * Creates the Proximity object and stores the sensor thresholds.
- * @param detectValue Value from which an object is detected.
- * @param closeValue Value from which an object is close.
- * @param centerDifference Maximum difference between left and right for center.
- * @return Constructor has no return value.
+ * Maakt een Proximity object aan en bewaart de drempelwaarden.
+ * @param detectValue Waarde vanaf waar een object wordt gezien.
+ * @param closeValue Waarde vanaf waar een object dichtbij is.
+ * @param centerDifference Maximaal verschil tussen links en rechts voor midden.
+ * @return Constructor heeft geen returnwaarde.
  */
 Proximity::Proximity(uint8_t detectValue,
                      uint8_t closeValue,
@@ -18,7 +18,7 @@ Proximity::Proximity(uint8_t detectValue,
 }
 
 /**
- * Prepares the front proximity sensor for use.
+ * Zet de proximity sensor aan de voorkant klaar voor gebruik.
  * @return void
  */
 void Proximity::begin() {
@@ -26,7 +26,7 @@ void Proximity::begin() {
 }
 
 /**
- * Reads the newest proximity values.
+ * Leest de nieuwste proximity waarden uit.
  * @return void
  */
 void Proximity::read() {
@@ -36,8 +36,8 @@ void Proximity::read() {
 }
 
 /**
- * Checks if the sensor sees an object.
- * @return bool True if left and right are above the detect value.
+ * Controleert of beide sensoren een object zien.
+ * @return bool True als links en rechts boven de detectiewaarde zitten.
  */
 bool Proximity::objectDetected() {
   if (leftValue >= detectThreshold && rightValue >= detectThreshold) {
@@ -48,8 +48,8 @@ bool Proximity::objectDetected() {
 }
 
 /**
- * Checks if the object is close enough.
- * @return bool True if left and right are above the close value.
+ * Controleert of het object dichtbij genoeg is.
+ * @return bool True als links en rechts boven de dichtbijwaarde zitten.
  */
 bool Proximity::objectClose() {
   if (leftValue >= closeThreshold && rightValue >= closeThreshold) {
@@ -60,8 +60,8 @@ bool Proximity::objectClose() {
 }
 
 /**
- * Determines where the object is.
- * @return ObjectDirection None, Left, Right of Center.
+ * Bepaalt waar het object staat.
+ * @return ObjectDirection Richting van het object: None, Left, Right of Center.
  */
 ObjectDirection Proximity::getDirection() {
   uint8_t difference = 0;
@@ -88,16 +88,16 @@ ObjectDirection Proximity::getDirection() {
 }
 
 /**
- * Returns the last left proximity value.
- * @return uint8_t Left proximity value.
+ * Geeft de laatste linker proximity waarde terug.
+ * @return uint8_t Linker proximity waarde.
  */
 uint8_t Proximity::getLeftValue() {
   return leftValue;
 }
 
 /**
- * Returns the last right proximity value.
- * @return uint8_t Right proximity value.
+ * Geeft de laatste rechter proximity waarde terug.
+ * @return uint8_t Rechter proximity waarde.
  */
 uint8_t Proximity::getRightValue() {
   return rightValue;
