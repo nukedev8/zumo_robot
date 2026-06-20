@@ -4,6 +4,7 @@
 #include "Lijnsensor.h"
 #include "Kleurdetectie.h"
 #include "Proximity.h"
+#include "xbee.h"
 
 Zumo32U4Motors  motors;
 Zumo32U4ButtonA buttonA;
@@ -13,8 +14,9 @@ Zumo32U4ButtonC buttonC;
 Lijnsensor    linePos(motors, buttonA);
 Kleurdetectie color;
 Proximity     proximity(2, 5, 1);
+Xbee          xbee;
 
-bool running = false;
+bool remoteMode = false;
 
 static const uint16_t MAX_SPEED_BLACK = 350;
 static const uint16_t MAX_SPEED_GREEN = 200;
@@ -30,20 +32,50 @@ unsigned long firstBlockSeenTime = 0;
 const unsigned long BLOCK_CONFIRM_MS = 150;
 bool blockFound = false;
 
+unsigned long lastRemoteCommand = 0;
+const unsigned long REMOTE_TIMEOUT_MS = 500;
+
 /**
- * Zet de robot aan of uit met knop B.
+ * Wisselt tussen handmatig (XBee) en autonoom rijden.
  * @return void
  */
-void toggleRunning() {
-    running = !running;
+void toggleRemote() {
+    remoteMode = !remoteMode;
     motors.setSpeeds(0, 0);
-    if (running) {
+    if (remoteMode) {
+        linePos.setState(LineState::Idle);
+        lastRemoteCommand = millis();
+    } else {
         linePos.setState(LineState::FollowLine);
         lastError = 0;
-        blockFound = false;
-        firstBlockSeenTime = 0;
-    } else {
-        linePos.setState(LineState::Idle);
+    }
+}
+
+/**
+ * Verwerkt commando's via XBee voor handmatige besturing.
+ * @return void
+ */
+void remoteControl() {
+    char commando = 0;
+    while (xbee.beschikbaar() > 0) {
+        commando = xbee.leesXbee();
+    }
+    
+    if (commando > 0) {
+        lastRemoteCommand = millis();
+        
+        switch (commando) {
+            case 'w': motors.setSpeeds(250, 250);   break;
+            case 's': motors.setSpeeds(-250, -250); break;
+            case 'a': motors.setSpeeds(-200, 200);  break;
+            case 'd': motors.setSpeeds(200, -200);  break;
+            case 'q': motors.setSpeeds(400, 400);   break;
+            case 'e': motors.setSpeeds(0, 0);       break;
+        }
+    }
+    
+    if (millis() - lastRemoteCommand > REMOTE_TIMEOUT_MS) {
+        motors.setSpeeds(0, 0);
     }
 }
 
@@ -80,7 +112,6 @@ void setup() {
     linePos.calibrate();
     buttonA.waitForButton();
 
-    running = true;
     linePos.setState(LineState::FollowLine);
 }
 
@@ -92,17 +123,20 @@ void loop() {
     linePos.update();
     color.update(linePos.getValues());
 
-    if (buttonB.getSingleDebouncedPress()) toggleRunning();
-
-    if (buttonC.getSingleDebouncedPress()) {
+    // Knop B = direct naar blok zoeken (handmatig triggeren eindzone)
+    if (buttonB.getSingleDebouncedPress()) {
         linePos.setState(LineState::SearchingBlock);
         pushSawLineTime = 0;
         blockFound = false;
         firstBlockSeenTime = 0;
     }
+    
+    // Knop C = wissel autonoom / handmatig (XBee)
+    if (buttonC.getSingleDebouncedPress()) toggleRemote();
 
-    if (!running) {
-        motors.setSpeeds(0, 0);
+    // Handmatige besturing via XBee
+    if (remoteMode) {
+        remoteControl();
         return;
     }
 
